@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "customer-management-practice"
+    }
+  },
+  "defaultProject": "customer-management-practice",
+  "cli": {
+    "analytics": false
+  }
 }
