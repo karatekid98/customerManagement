@@ -1,3 +1,4 @@
+import { AuthGuardService } from './auth/auth-guard.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -6,6 +7,9 @@ import { AppComponent } from './app.component';
 import { LoginPageModule } from './login-page/login-page.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LocalStorageService } from './local-storage.service';
+import { AuthGuard } from './auth/auth.guard';
+import { ReactiveFormsModule, NgForm, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,9 +20,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     LoginPageModule,
     SharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AuthGuardService, LocalStorageService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

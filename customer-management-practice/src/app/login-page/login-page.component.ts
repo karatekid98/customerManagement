@@ -1,24 +1,51 @@
+import { LocalStorageService } from './../local-storage.service';
+import { AuthGuardService } from './../auth/auth-guard.service';
+import { User } from './../user';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormControl, FormGroupDirective, NgForm } from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material/core';
+import { Router } from '@angular/router';
+
+
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.scss']
 })
 export class LoginPageComponent implements OnInit {
-  signin: FormGroup = new FormGroup({
-    username: new FormControl(''),
-    password: new FormControl('', [Validators.required, Validators.min(3) ])
-  });
+  public usernameDef;
+  public passwordDef;
+
+  public user: User = {
+    username: '',
+    password: ''
+  };
   hide = true;
-  get passwordInput(): any {
-    return this.signin.get('password');
+  matcher = new ErrorStateMatcher();
+
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
   }
 
-  constructor() { }
+  constructor(private localStorageService: LocalStorageService, private authService: AuthGuardService, private router: Router) { }
 
   ngOnInit(): void {
+    this.router.navigate(['/customers']);
+  }
 
+  logIn(userForm): void {
+    this.usernameDef = this.authService.returnUserAndPass().username;
+    this.passwordDef = this.authService.returnUserAndPass().password;
+
+    if (this.user.username === this.usernameDef && this.user.password === this.passwordDef) {
+      localStorage.setItem('isLoggedIn', 'true');
+      this.router.navigate(['/customers']);
+
+    } else {
+      alert('niste uspeli');
+      localStorage.setItem('isLoggedIn', 'false');
+    }
   }
 
 }
