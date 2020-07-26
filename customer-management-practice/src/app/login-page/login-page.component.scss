@@ -1,11 +1,22 @@
-:host {
+@mixin flexCenter {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
+}
+:host {
+  @include flexCenter();
   height: 80%;
 }
+.sketch {
+  @include flexCenter();
+  width: 600px;
+  height: 600px;
+  background: url("https://previews.123rf.com/images/davidarts/davidarts1511/davidarts151100358/47969228-modern-abstract-background-with-hand-drawn-doodle-sketches-for-flyer-designs-brochure-layouts-busine.jpg") no-repeat center center fixed;
+  border-radius: 3%;
+}
+
 .example-card {
   max-width: 400px;
   text-align: center;
