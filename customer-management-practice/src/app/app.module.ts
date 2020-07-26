@@ -10,10 +10,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LocalStorageService } from './local-storage.service';
 import { AuthGuard } from './auth/auth.guard';
 import { ReactiveFormsModule, NgForm, FormsModule } from '@angular/forms';
+import { CustomersComponent } from './customers/customers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CustomersComponent,
   ],
   imports: [
     BrowserModule,
