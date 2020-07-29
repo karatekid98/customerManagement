@@ -11,11 +11,18 @@ import { LocalStorageService } from './local-storage.service';
 import { AuthGuard } from './auth/auth.guard';
 import { ReactiveFormsModule, NgForm, FormsModule } from '@angular/forms';
 import { CustomersComponent } from './customers/customers.component';
-
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatTabsModule} from '@angular/material/tabs';
+import { CustomerCardViewComponent } from './customer-card-view/customer-card-view.component';
 @NgModule({
   declarations: [
     AppComponent,
     CustomersComponent,
+    ToolbarComponent,
+    CustomerCardViewComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +31,11 @@ import { CustomersComponent } from './customers/customers.component';
     SharedModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatMenuModule,
+    MatTabsModule
   ],
   providers: [AuthGuardService, LocalStorageService, AuthGuard],
   bootstrap: [AppComponent]

@@ -1,0 +1,9 @@
+<mat-toolbar>
+  <span>Customers</span>
+  <span class="example-spacer"></span>
+  <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>About</button>
+    <button mat-menu-item (click)="logOut()">Log out</button>
+  </mat-menu>
+</mat-toolbar>
