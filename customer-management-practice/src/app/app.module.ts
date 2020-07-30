@@ -17,9 +17,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
-import { CustomerCardViewComponent } from './customer-card-view/customer-card-view.component';
+import { CustomerCardViewComponent } from './customers/customer-card-view/customer-card-view.component';
 import { CustomerService } from './customer.service';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +39,8 @@ import { CustomerService } from './customer.service';
     MatIconModule,
     MatMenuModule,
     MatTabsModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule
   ],
   providers: [AuthGuardService, LocalStorageService, AuthGuard, CustomerService],
   bootstrap: [AppComponent]

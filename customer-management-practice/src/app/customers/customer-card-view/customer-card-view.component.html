@@ -1,0 +1,19 @@
+<mat-card class="example-card" fxLayout="column" fxLayoutAlign="start center" *ngIf="this.customers">
+  <mat-card-content class="grid" fxLayout="row wrap" fxLayoutAlign="start center">
+  <mat-card class="example-card-two" *ngFor="let customer of this.customers">
+    <mat-card-header>
+      <mat-card-title>{{ customer.firstName }} {{ customer.lastName }}  </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="../../assets/customer-icon.png" alt="Customer">
+    <mat-card-content>
+      <span>Email: {{ customer.email }} </span><br>
+      <span>Address: {{ customer.address }}</span>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>DETAILS</button>
+    </mat-card-actions>
+  </mat-card>
+</mat-card-content>
+</mat-card>
+
+
