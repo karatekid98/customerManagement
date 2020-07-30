@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AuthGuardService } from './auth/auth-guard.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -17,6 +18,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
 import { CustomerCardViewComponent } from './customer-card-view/customer-card-view.component';
+import { CustomerService } from './customer.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,9 +38,10 @@ import { CustomerCardViewComponent } from './customer-card-view/customer-card-vi
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,
-    MatTabsModule
+    MatTabsModule,
+    HttpClientModule
   ],
-  providers: [AuthGuardService, LocalStorageService, AuthGuard],
+  providers: [AuthGuardService, LocalStorageService, AuthGuard, CustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
