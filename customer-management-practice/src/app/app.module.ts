@@ -13,19 +13,20 @@ import { AuthGuard } from './auth/auth.guard';
 import { ReactiveFormsModule, NgForm, FormsModule } from '@angular/forms';
 import { CustomersComponent } from './customers/customers.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatTabsModule} from '@angular/material/tabs';
+
+
 import { CustomerCardViewComponent } from './customers/customer-card-view/customer-card-view.component';
 import { CustomerService } from './customer.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { CustomerTableViewComponent } from './customers/customer-table-view/customer-table-view.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     CustomersComponent,
     ToolbarComponent,
     CustomerCardViewComponent,
+    CustomerTableViewComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,10 +36,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatMenuModule,
-    MatTabsModule,
     HttpClientModule,
     FlexLayoutModule
   ],
