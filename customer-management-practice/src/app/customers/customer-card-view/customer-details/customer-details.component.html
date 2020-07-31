@@ -1,1 +1,42 @@
-<p>customer-details works!</p>
+<div class="container" fxLayout="column" fxLayoutAlign="center center" >
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Edit customer</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field appearance="fill">
+      <mat-label>First name</mat-label>
+      <input matInput type="text" value="{{customer.firstName}}" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Last name</mat-label>
+      <input matInput type="text" value="{{customer.lastName}}"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Address</mat-label>
+      <input matInput type="text" value="{{customer.address}}"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput type="text" value="{{customer.email}}"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Phone</mat-label>
+      <input matInput type="text" value="{{customer.phone}}"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Birth date</mat-label>
+      <input matInput type="text" value="{{customer.birthDate}}"/>
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button color="primary">CHANGE</button>
+  </mat-card-actions>
+</mat-card>
+</div>

@@ -17,4 +17,7 @@ export class CustomerService {
     return this.http.get<Customer[]>('https://5f242f363b9d3500162040f3.mockapi.io/api/data/Customers');
   }
 
+  getOneCustomer(id: any): Observable<Customer[]> {
+    return this.http.get<Customer[]>(`https://5f242f363b9d3500162040f3.mockapi.io/api/data/Customers/${id}`);
+  }
 }
