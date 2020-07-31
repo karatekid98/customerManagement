@@ -13,8 +13,8 @@ export class CustomerService {
 
   constructor(private http: HttpClient) { }
 
-  getCustomers(): Observable<ApiResponse<Customer[]>>  {
-    return this.http.get<ApiResponse<Customer[]>>('https://customers.free.beeceptor.com/my/api/path/GetAllCustomers');
+  getCustomers(): Observable<Customer[]>  {
+    return this.http.get<Customer[]>('https://5f242f363b9d3500162040f3.mockapi.io/api/data/Customers');
   }
 
 }

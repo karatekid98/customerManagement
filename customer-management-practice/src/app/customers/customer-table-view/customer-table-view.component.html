@@ -1,23 +1,19 @@
 <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-  <!-- Position Column -->
-  <ng-container matColumnDef="name">
+ <ng-container matColumnDef="name">
     <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.firstName}} {{element.lastName}} </mat-cell>
   </ng-container>
 
-  <!-- Name Column -->
   <ng-container matColumnDef="address">
     <mat-header-cell *matHeaderCellDef> Address </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.address}} </mat-cell>
   </ng-container>
 
-  <!-- Weight Column -->
-  <ng-container matColumnDef="email">
+ <ng-container matColumnDef="email">
     <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
   </ng-container>
 
-  <!-- Symbol Column -->
   <ng-container matColumnDef="birthDate">
     <mat-header-cell *matHeaderCellDef> Birth date </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.birthDate}} </mat-cell>

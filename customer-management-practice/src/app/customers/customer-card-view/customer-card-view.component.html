@@ -10,7 +10,7 @@
       <span>Address: {{ customer.address }}</span>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button>DETAILS</button>
+      <button mat-button (click)="goToDetails(customer.id)">DETAILS</button>
     </mat-card-actions>
   </mat-card>
 </mat-card-content>
