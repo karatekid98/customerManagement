@@ -19,7 +19,7 @@ export class CustomerTableViewComponent implements OnInit {
 
   private showCustomers(): void {
     this.customerService.getCustomers().subscribe((customers) => {
-      this.dataSource = customers.data;
+      this.dataSource = customers;
     });
   }
 }
