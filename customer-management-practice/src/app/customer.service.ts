@@ -20,4 +20,8 @@ export class CustomerService {
   getOneCustomer(id: any): Observable<Customer[]> {
     return this.http.get<Customer[]>(`https://5f242f363b9d3500162040f3.mockapi.io/api/data/Customers/${id}`);
   }
+
+  updateOneCutomer(customerform: Customer, id: any): Observable<Customer> {
+    return this.http.put<Customer>(`https://5f242f363b9d3500162040f3.mockapi.io/api/data/Customers/${id}`, customerform);
+  }
 }
