@@ -1,1 +1,44 @@
-<p>add-customer works!</p>
+
+<div class="container" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="example-card">
+    <mat-card-header fxLayout="column" fxLayoutAlign="center center">
+      <mat-card-title>Add customer</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form  class="example-form" [formGroup]="customerForm">
+        <mat-form-field appearance="fill">
+          <mat-label>First name</mat-label>
+          <input matInput type="text"  class="form-control" formControlName="firstName" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Last name</mat-label>
+          <input matInput type="text" class="form-control" formControlName="lastName"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Address</mat-label>
+          <input matInput type="text" class="form-control" formControlName="address"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput type="text" class="form-control"  formControlName="email"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Phone</mat-label>
+          <input matInput type="text" class="form-control"  formControlName="phone"/>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions fxLayout="row" fxLayoutAlign="center center">
+      <button mat-button color="primary" (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <button mat-button color="primary" type="submit" (click)="onSubmit(customerForm)">
+        ADD CUSTOMER
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
