@@ -4,7 +4,7 @@
     <mat-card-header>
       <mat-card-title>{{ customer.firstName }} {{ customer.lastName }}  </mat-card-title>
     </mat-card-header>
-    <img mat-card-image src="../../assets/customer-icon.png" alt="Customer">
+    <img mat-card-image src="{{ customer.avatar }} " alt="Customer">
     <mat-card-content>
       <span>Email: {{ customer.email }} </span><br>
       <span>Address: {{ customer.address }}</span>

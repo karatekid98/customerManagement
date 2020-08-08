@@ -6,4 +6,5 @@ export interface Customer {
   birthDate: Date;
   email: string;
   phone: string;
+  avatar: any;
 }
