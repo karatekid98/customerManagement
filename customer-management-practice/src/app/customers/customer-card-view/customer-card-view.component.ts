@@ -24,4 +24,8 @@ export class CustomerCardViewComponent implements OnInit {
   goToDetails(id: any): void{
     this.router.navigate([`/customer-details/${id}`]);
   }
+
+  addCustomer(): void {
+
+  }
 }
