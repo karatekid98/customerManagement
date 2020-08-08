@@ -26,6 +26,6 @@ export class CustomerCardViewComponent implements OnInit {
   }
 
   addCustomer(): void {
-
+    this.router.navigate(['add-customer']);
   }
 }

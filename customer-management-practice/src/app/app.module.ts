@@ -20,6 +20,7 @@ import { CustomerService } from './customer.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CustomerTableViewComponent } from './customers/customer-table-view/customer-table-view.component';
 import { CustomerDetailsComponent } from './customers/customer-card-view/customer-details/customer-details.component';
+import { AddCustomerComponent } from './customers/add-customer/add-customer.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CustomerDetailsComponent } from './customers/customer-card-view/custome
     CustomerCardViewComponent,
     CustomerTableViewComponent,
     CustomerDetailsComponent,
+    AddCustomerComponent,
   ],
   imports: [
     BrowserModule,
