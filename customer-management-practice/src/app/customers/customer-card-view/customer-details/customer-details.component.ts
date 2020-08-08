@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CustomerService } from '../../../customer.service';
 import { Customer } from 'src/app/customer';
 
@@ -20,7 +20,8 @@ export class CustomerDetailsComponent implements OnInit {
   };
   constructor(
     private customerService: CustomerService,
-    private activatedroute: ActivatedRoute
+    private activatedroute: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -30,4 +31,13 @@ export class CustomerDetailsComponent implements OnInit {
       console.log(this.customer);
     });
   }
+
+  saveChanges(): void {
+    this.router.navigate(['/customers']);
+  }
+
+  goBack(): void {
+    this.router.navigate(['/customers']);
+  }
+
 }
