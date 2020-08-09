@@ -6,12 +6,12 @@
     </mat-card-header>
     <img mat-card-image src="{{ customer.avatar }} " alt="Customer">
     <mat-card-content>
-      <span>Email: {{ customer.email }} </span><br>
-      <span>Address: {{ customer.address }}</span>
+      <span>{{'Email' | translate}}: {{ customer.email }} </span><br>
+      <span>{{'Address' | translate}}: {{ customer.address }}</span>
     </mat-card-content>
     <mat-card-actions fxLayout="row" fxLayoutAlign="space-between center" >
-      <button mat-button (click)="goToDetails(customer.id)">DETAILS</button>
-      <button  mat-button (click)="deleteCustomer(customer.id)">DELETE CUSTOMER</button>
+      <button mat-button (click)="goToDetails(customer.id)">{{'DETAILS' | translate}}</button>
+      <button  mat-button (click)="deleteCustomer(customer.id)">{{'DELETE CUSTOMER' | translate}}</button>
     </mat-card-actions>
   </mat-card>
 </mat-card-content>

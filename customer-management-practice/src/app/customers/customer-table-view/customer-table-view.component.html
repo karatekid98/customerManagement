@@ -1,26 +1,26 @@
 <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
  <ng-container matColumnDef="name">
-    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef> {{'Name' | translate}} </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.firstName}} {{element.lastName}} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="address">
-    <mat-header-cell *matHeaderCellDef> Address </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef> {{'Address' | translate}}</mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.address}} </mat-cell>
   </ng-container>
 
  <ng-container matColumnDef="email">
-    <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef> {{'Email' | translate}} </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="birthDate">
-    <mat-header-cell *matHeaderCellDef> Birth date </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef> {{'Birth date' | translate}}  </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.birthDate}} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="phone">
-    <mat-header-cell *matHeaderCellDef> Phone number </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef> {{'Phone number' | translate}} </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.phone}} </mat-cell>
   </ng-container>
 

@@ -25,6 +25,7 @@ import { ModalDeleteCustomerComponent } from './customers/customer-card-view/mod
 
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { Translate } from './translate.service';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
       }
   })
   ],
-  providers: [AuthGuardService, LocalStorageService, AuthGuard, CustomerService],
+  providers: [AuthGuardService, LocalStorageService, AuthGuard, CustomerService, Translate],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

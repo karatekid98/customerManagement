@@ -7,7 +7,7 @@
   "Customers": "Kupci",
   "About": "O nama",
   "Log out": "Odjavi se",
-  "Edit Customer": "Izmeni podatke",
+  "Edit customer": "Izmeni podatke",
   "First name": "Ime",
   "Last name": "Prezime",
   "Phone": "Broj telefona",
@@ -22,5 +22,6 @@
   "Phone number": "Broj telefona",
   "Are you sure that you want to delete this customer?": "Da li ste sigurni da želite da obrišete ovog kupca?",
   "Cancel": "Odustani",
-  "Delete": "Obriši"
+  "Delete": "Obriši",
+  "ADD": "DODAJ"
 }
