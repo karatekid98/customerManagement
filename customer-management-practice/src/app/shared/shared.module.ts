@@ -8,6 +8,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatDialogModule} from '@angular/material/dialog';
 @NgModule({
   declarations: [],
   imports: [
@@ -19,7 +20,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatTableModule,
     MatMenuModule,
     MatTabsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatDialogModule
   ],
   exports: [
     MatCardModule,
@@ -29,7 +31,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatTableModule,
     MatMenuModule,
     MatTabsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatDialogModule
   ]
 })
 export class SharedModule { }

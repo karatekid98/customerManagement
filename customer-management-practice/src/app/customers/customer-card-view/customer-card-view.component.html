@@ -9,13 +9,14 @@
       <span>Email: {{ customer.email }} </span><br>
       <span>Address: {{ customer.address }}</span>
     </mat-card-content>
-    <mat-card-actions>
+    <mat-card-actions fxLayout="row" fxLayoutAlign="space-between center" >
       <button mat-button (click)="goToDetails(customer.id)">DETAILS</button>
+      <button  mat-button (click)="deleteCustomer(customer.id)">DELETE CUSTOMER</button>
     </mat-card-actions>
   </mat-card>
 </mat-card-content>
 </mat-card>
 
-  <button class="addBtn" mat-button (click)="addCustomer()"><mat-icon>person_add</mat-icon></button>
+<button class="addBtn" mat-button (click)="addCustomer()"><mat-icon>person_add</mat-icon></button>
 
 

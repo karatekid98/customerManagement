@@ -21,6 +21,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { CustomerTableViewComponent } from './customers/customer-table-view/customer-table-view.component';
 import { CustomerDetailsComponent } from './customers/customer-card-view/customer-details/customer-details.component';
 import { AddCustomerComponent } from './customers/add-customer/add-customer.component';
+import { ModalDeleteCustomerComponent } from './customers/modal-delete-customer/modal-delete-customer.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { AddCustomerComponent } from './customers/add-customer/add-customer.comp
     CustomerTableViewComponent,
     CustomerDetailsComponent,
     AddCustomerComponent,
+    ModalDeleteCustomerComponent,
   ],
   imports: [
     BrowserModule,
