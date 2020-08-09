@@ -23,6 +23,8 @@ import { CustomerDetailsComponent } from './customers/customer-card-view/custome
 import { AddCustomerComponent } from './customers/add-customer/add-customer.component';
 import { ModalDeleteCustomerComponent } from './customers/customer-card-view/modal-delete-customer/modal-delete-customer.component';
 
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 @NgModule({
   declarations: [
@@ -44,9 +46,20 @@ import { ModalDeleteCustomerComponent } from './customers/customer-card-view/mod
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+  })
   ],
   providers: [AuthGuardService, LocalStorageService, AuthGuard, CustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
