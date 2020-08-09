@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { Translate } from '../translate.service';
+
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
@@ -8,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private translateService: Translate) { }
 
   ngOnInit(): void {
   }
@@ -17,5 +19,7 @@ export class ToolbarComponent implements OnInit {
     localStorage.removeItem('isLoggedIn');
     this.router.navigate(['/']);
   }
-
+  useLanguage(language): void {
+    this.translateService.useLanguage(language);
+  }
 }

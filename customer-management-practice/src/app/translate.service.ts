@@ -1,9 +1,15 @@
 import { Injectable } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class TranslateService {
+export class Translate{
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
+
+
+  useLanguage(language: string): void {
+    this.translate.use(language);
+  }
 }
