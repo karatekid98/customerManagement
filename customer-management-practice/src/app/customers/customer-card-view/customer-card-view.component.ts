@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CustomerService } from '../../customer.service';
 import { Customer } from '../../customer';
 import { Router } from '@angular/router';
-import { ModalDeleteCustomerComponent } from '../modal-delete-customer/modal-delete-customer.component';
+import { ModalDeleteCustomerComponent } from './modal-delete-customer/modal-delete-customer.component';
 import {MatDialog} from '@angular/material/dialog';
 
 
@@ -13,6 +13,7 @@ import {MatDialog} from '@angular/material/dialog';
 })
 export class CustomerCardViewComponent implements OnInit {
   customers: Customer[];
+
   constructor(private customerService: CustomerService, private router: Router, public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -34,6 +35,9 @@ export class CustomerCardViewComponent implements OnInit {
   }
 
   deleteCustomer(id: any): void {
-    this.dialog.open(ModalDeleteCustomerComponent);
+    let dialogRef = this.dialog.open(ModalDeleteCustomerComponent, {data: {id : id}});
+    dialogRef.afterClosed().subscribe(x => {
+      this.showCustomers();
+    });
   }
 }

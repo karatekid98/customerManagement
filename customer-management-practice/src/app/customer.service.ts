@@ -27,4 +27,8 @@ export class CustomerService {
   addCustomer(customerform: Customer): Observable<Customer> {
     return this.http.post<Customer>('https://5f242f363b9d3500162040f3.mockapi.io/api/data/Customers/', customerform);
   }
+
+  deleteCustomer(id: any): Observable<Customer> {
+    return this.http.delete<Customer>(`https://5f242f363b9d3500162040f3.mockapi.io/api/data/Customers/${id}`);
+  }
 }
