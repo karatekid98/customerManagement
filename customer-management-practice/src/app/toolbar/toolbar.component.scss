@@ -1,3 +1,20 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+
+.flag-icon-srb {
+  background-image: url(../../assets/srbflag.jpg);
+
+}
+
+.flag-icon-eng {
+  background-image: url(../../assets/engflag.jpg);
+}
+.flag-icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  min-width: 0;
+  margin: 5px;
+}

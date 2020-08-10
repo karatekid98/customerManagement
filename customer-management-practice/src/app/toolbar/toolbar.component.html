@@ -1,8 +1,8 @@
 <mat-toolbar>
   <span>{{'Customers' | translate }}</span>
   <span class="example-spacer"></span>
-  <button mat-button (click)="useLanguage('en')">en</button>
-  <button mat-button (click)="useLanguage('sr')">sr</button>
+    <button class="flag-icon flag-icon-eng" mat-button (click)="useLanguage('en')"></button>
+    <button class="flag-icon flag-icon-srb" mat-button (click)="useLanguage('sr')"></button>
   <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item>{{ 'About' | translate}}</button>
