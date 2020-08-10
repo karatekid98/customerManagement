@@ -26,7 +26,7 @@ import { ModalDeleteCustomerComponent } from './customers/customer-card-view/mod
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { Translate } from './translate.service';
-import { CustomerMapViewComponent } from './customer-map-view/customer-map-view.component';
+import { CustomerMapViewComponent } from './customers/customer-map-view/customer-map-view.component';
 
 @NgModule({
   declarations: [
