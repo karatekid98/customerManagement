@@ -6,20 +6,35 @@ import { Translate } from '../translate.service';
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
-  styleUrls: ['./toolbar.component.scss']
+  styleUrls: ['./toolbar.component.scss'],
 })
 export class ToolbarComponent implements OnInit {
-
-  constructor(private router: Router, private translateService: Translate) { }
+  public lang = 'true';
+  public selectedLang = true;
+  constructor(private router: Router, private translateService: Translate) {}
 
   ngOnInit(): void {
+    if (this.selectedLang) {
+      console.log('cao');
+    }
   }
 
   logOut(): void {
     localStorage.removeItem('isLoggedIn');
     this.router.navigate(['/']);
   }
+
   useLanguage(language): void {
     this.translateService.useLanguage(language);
+  }
+
+  public languageSelected(lang): void {
+    if (lang === 'en') {
+      localStorage.setItem('language', 'true');
+      this.selectedLang = true;
+    } else {
+      localStorage.setItem('language', 'false');
+      this.selectedLang = false;
+    }
   }
 }
