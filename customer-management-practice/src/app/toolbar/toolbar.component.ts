@@ -37,4 +37,12 @@ export class ToolbarComponent implements OnInit {
       this.selectedLang = false;
     }
   }
+
+  goToCustomers(): void {
+    this.router.navigate(['/customers']);
+  }
+
+  goToBooks(): void {
+    this.router.navigate(['/books']);
+  }
 }
