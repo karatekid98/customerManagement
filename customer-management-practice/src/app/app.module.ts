@@ -26,6 +26,7 @@ import { ModalDeleteCustomerComponent } from './customers/customer-card-view/mod
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { Translate } from './translate.service';
+import { BooksComponent } from './books/books.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { Translate } from './translate.service';
     CustomerDetailsComponent,
     AddCustomerComponent,
     ModalDeleteCustomerComponent,
+    BooksComponent,
   ],
   imports: [
     BrowserModule,

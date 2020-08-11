@@ -15,7 +15,7 @@ export class ToolbarComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.selectedLang) {
-      console.log('cao');
+      /*add logics*/
     }
   }
 

@@ -1,5 +1,6 @@
 <mat-toolbar>
-  <span>{{'Customers' | translate }}</span>
+  <button class="viewBtn" mat-button>{{'Customers' | translate }}</button>
+  <button class="viewBtn" mat-button>{{'Products' | translate }}</button>
   <span class="example-spacer"></span>
     <button class="flag-icon flag-icon-eng" mat-button (click)="useLanguage('en')" (click)="languageSelected('en')"></button>
     <button class="flag-icon flag-icon-srb" mat-button (click)="useLanguage('sr')" (click)="languageSelected('sr')"></button>
